@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <link rel="stylesheet" href="styles/valentine.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="fade-in">Will you be my Valentine Oluwabukunmi❤️?</h1>
+        <p class="fade-in">You make every day special, but I want this one to be unforgettable.</p>
+        <button class="heart-btn" onclick="showPopup()">Yes</button>
+      </div>
+    
+      <div id="popup" class="hidden">
+        <div class="popup-content">
+          <h2>You said YES! 🎉</h2>
+          <p>I can't wait to spend Valentine’s Day with you ❤️</p>
+          <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+      </div>
+       <!-- Background Music -->
+       <audio id="backgroundMusic" muted autoplay loop>
+        <source src="assests/music_Perfect__Ed_Sheeran_WorldSrc.com.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="scripts/valentine.js"></script>
+</body>
+</html> 

@@ -1,0 +1,168 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .heart {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 200px;
+    top: 200px;
+  }
+  
+  .heart .left {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: -25px;
+    top: 0px;
+  }
+  
+  .heart .right {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: 0px;
+    top: -25px;
+  }
+  
+  h1, h2 {
+    color: white;
+    position: relative;
+  }
+  
+  .panel {
+    z-index: 1;
+    padding: 40px;
+    background: rgba( 255, 154, 154, 0.10 );
+    box-shadow: 0 8px 32px 0 pink;
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 20px;
+  }
+
+  .hero {
+    text-align: center;
+    animation: fade-in 2s ease-in-out;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .heart-btn {
+    background: #e63946;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .heart-btn:hover {
+    transform: scale(1.1);
+    background: #c21825;
+  }
+  
+  /* Popup Styles */
+  #popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  #popup .popup-content {
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  #popup.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background: #c21825;
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .heart-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    #popup .popup-content {
+      padding: 15px;
+    }
+  }
+  
