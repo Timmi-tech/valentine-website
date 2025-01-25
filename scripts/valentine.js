@@ -50,6 +50,8 @@ setInterval(() => {
 
 // Show Popup
 function showPopup() {
+  const song = document.getElementById("song");
+  song.play();
   const popup = document.getElementById('popup');
   popup.classList.add('active');
   createCelebrationEffect();
