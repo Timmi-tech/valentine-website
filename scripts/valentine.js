@@ -1,9 +1,3 @@
-// Unmute and play background music once the page loads
-window.addEventListener('load', () => {
-  const music = document.getElementById('backgroundMusic');
-  music.muted = false; // Unmute the audio
-});
-
 const hearts = [];
 const pinks = ["#ff748c", "#ff8da1", "#ffa7b6"];
 
@@ -53,10 +47,6 @@ setInterval(() => {
 setInterval(() => {
   hearts.forEach((heart) => heart.update());
 }, 10);
-
-const music = document.getElementById('background-music');
-music.volume = 0.5; // Adjust volume as needed
-music.play();
 
 // Show Popup
 function showPopup() {
